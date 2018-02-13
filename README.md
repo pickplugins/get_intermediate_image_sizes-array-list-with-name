@@ -48,3 +48,21 @@ array (
 ```
 
 So you can use this array using loop to generate input field for select, radio and etc
+
+```php
+	$image_sizes = post_grid_intermediate_image_sizes();
+
+
+	?>
+    <select name="option_name">
+    <?php
+    foreach ( $image_sizes as $size_key=>$size_name ){
+        ?>
+        <option value="<?php echo $size_key; ?>"><?php echo $size_name; ?></option>
+        <?php
+    }
+
+    ?>
+    </select>
+    <?php
+```
