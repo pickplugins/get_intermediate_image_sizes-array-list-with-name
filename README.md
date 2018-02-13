@@ -6,7 +6,6 @@ get_intermediate_image_sizes() only return the name of available image size, but
 
 function intermediate_image_sizes_array(){
 
-
 	$get_intermediate_image_sizes =  get_intermediate_image_sizes();
 	$get_intermediate_image_sizes = array_merge($get_intermediate_image_sizes,array('full'));
 
@@ -20,7 +19,6 @@ function intermediate_image_sizes_array(){
 	}
 
 	return $all_sizes;
-
 
 }
 
@@ -50,19 +48,19 @@ array (
 So you can use this array using loop to generate input field for select, radio and etc
 
 ```php
-	$image_sizes = post_grid_intermediate_image_sizes();
+$image_sizes = post_grid_intermediate_image_sizes();
 
 
-	?>
-    <select name="option_name">
-    <?php
-    foreach ( $image_sizes as $size_key=>$size_name ){
-        ?>
-        <option value="<?php echo $size_key; ?>"><?php echo $size_name; ?></option>
-        <?php
-    }
-
+?>
+<select name="option_name">
+<?php
+foreach ( $image_sizes as $size_key=>$size_name ){
     ?>
-    </select>
+    <option value="<?php echo $size_key; ?>"><?php echo $size_name; ?></option>
     <?php
+}
+
+?>
+</select>
+<?php
 ```
