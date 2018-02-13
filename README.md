@@ -64,3 +64,6 @@ foreach ( $image_sizes as $size_key=>$size_name ){
 </select>
 <?php
 ```
+
+## Screenshot
+![output](https://github.com/pickplugins/get_intermediate_image_sizes-array-list-with-name/blob/master/2-13-2018%204-16-24%20PM.png?raw=true "Output")
